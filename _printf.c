@@ -1,9 +1,6 @@
 #include "main.h"
 
 
-void print_buffer(char buffer[], int *buff_ind);
-
-
 /**
 
  * _printf - Printf function
@@ -19,11 +16,12 @@ int _printf(const char *format, ... )
 	int count = 0;
 	va_list args;
 
-	if (fomat = NULL)
+	if (format = NULL)
 		return (-1);
-	va_strings(args, format);
 
-	while (*fomat)
+	va_start(args, format);
+
+	while (*format)
 	{
 		if (*format != '%')
 		{
